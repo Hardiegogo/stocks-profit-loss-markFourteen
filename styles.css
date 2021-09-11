@@ -1,0 +1,108 @@
+body {
+  text-align: center;
+  background: #25CED1;
+  font-family: 'Sora', sans-serif;
+}
+
+body h1 {
+  color: #FFFFFF;
+}
+
+.main {
+  color: #FFFFFF;
+}
+
+.main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .container .img-left, .main .container .img-right {
+  display: none;
+}
+
+.main .container .img-left img, .main .container .img-right img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+.main .container .inputs {
+  margin: 1rem;
+}
+
+.main label {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.main input {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
+  min-width: 195px;
+  border-radius: 10px;
+  border: none;
+}
+
+.main #check-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: large;
+  background: #FF8A5B;
+  color: #FFFFFF;
+}
+
+.main #output-area {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  font-size: larger;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer {
+  margin: auto;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 10vw;
+  margin: 1rem;
+  max-width: 40px;
+}
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+footer {
+  margin-top: auto;
+}
+/*# sourceMappingURL=styles.css.map */
