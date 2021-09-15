@@ -11,7 +11,7 @@ function showProfitLoss(){
     let current= Number(currentPrice.value);
     let quantity=Number(stockQuantity.value);
 
-    if(startPrice>current && startPrice>=0){
+    if(startPrice>current && startPrice>=0 && quantity>=0){
         let loss=(startPrice-current)*quantity;
         let lossPercent=(loss/startPrice)*100;
         imgLeft.style.display = "none";
@@ -19,7 +19,7 @@ function showProfitLoss(){
 
         outputArea.innerHTML=`Your loss is ${loss} and the loss percentage is ${lossPercent}!`
         
-    }else if(startPrice<current && startPrice>=0){
+    }else if(startPrice<current && startPrice>=0 && quantity>=0){
         let profit=(current-startPrice)*quantity;
         
         let profitPercent=(profit/startPrice)*100;
@@ -27,8 +27,10 @@ function showProfitLoss(){
         imgRight.style.display = "block";
         outputArea.innerHTML = `Your profit is ${profit} and the profit percentage is ${profitPercent}!`;
     }else{
-        if(startPrice<=0){outputArea.innerHTML = "Please enter correct price";}else{
-            outputArea.innerHTML = "No gain, No pain";
+        if (startPrice <= 0 || quantity <= 0) {
+          outputArea.innerHTML = "Please enter correct price";
+        } else {
+          outputArea.innerHTML = "No gain, No pain";
         }
         
     }
