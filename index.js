@@ -28,7 +28,7 @@ function showProfitLoss(){
         outputArea.innerHTML = `Your profit is ${profit} and the profit percentage is ${profitPercent}!`;
     }else{
         if (startPrice <= 0 || quantity <= 0) {
-          outputArea.innerHTML = "Please enter correct price";
+          outputArea.innerHTML = "Please enter correct values";
         } else {
           outputArea.innerHTML = "No gain, No pain";
         }
