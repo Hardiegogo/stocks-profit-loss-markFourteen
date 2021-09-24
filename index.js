@@ -13,19 +13,19 @@ function showProfitLoss(){
 
     if(startPrice>current && startPrice>=0 && quantity>=0){
         let loss=(startPrice-current)*quantity;
-        let lossPercent=(loss/startPrice)*100;
+        let lossPercent=(loss/(startPrice*quantity))*100;
         imgLeft.style.display = "none";
         imgRight.style.display = "none";
 
-        outputArea.innerHTML=`Your loss is ${loss} and the loss percentage is ${lossPercent}!`
+        outputArea.innerHTML=`Your loss is ${loss} and the loss percentage is ${lossPercent.toFixed(2)}!`
         
     }else if(startPrice<current && startPrice>=0 && quantity>=0){
         let profit=(current-startPrice)*quantity;
         
-        let profitPercent=(profit/startPrice)*100;
+        let profitPercent=(profit/(startPrice*quantity))*100;
         imgLeft.style.display='block';
         imgRight.style.display = "block";
-        outputArea.innerHTML = `Your profit is ${profit} and the profit percentage is ${profitPercent}!`;
+        outputArea.innerHTML = `Your profit is ${profit} and the profit percentage is ${profitPercent.toFixed(2)}!`;
     }else{
         if (startPrice <= 0 || quantity <= 0) {
           outputArea.innerHTML = "Please enter correct values";
